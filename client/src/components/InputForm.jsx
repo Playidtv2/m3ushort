@@ -71,7 +71,7 @@ export const InputForm = () => {
             bg="dark"
             className={ styles.mainContainer } >
             <FormControl isInvalid={ isError }>
-                <FormLabel >Convert long URLs into shortened versions with a single click.</FormLabel>
+                <FormLabel >แปลง URL ยาวๆ ให้เป็นเวอร์ชั่นสั้นลงด้วยการคลิกเพียงครั้งเดียว>
                 <Input
                     id="longUrl"
                     type="url"
@@ -81,12 +81,12 @@ export const InputForm = () => {
                     onKeyDown={ handleEnter }
                 />
                 { !isError ? (
-                    <FormHelperText>Enter your Long Url</FormHelperText>
+                    <FormHelperText>ป้อน URL แบบยาวของคุณ</FormHelperText>
                 ) : (
-                    <FormErrorMessage>URL is required.</FormErrorMessage>
+                    <FormErrorMessage>จำเป็นต้องมี URL</FormErrorMessage>
                 ) }
             </FormControl>
-            <FormLabel mt={ 7 } fontSize='md'>Create personalized and memorable links for your URLs (Optional)</FormLabel>
+            <FormLabel mt={ 7 } fontSize='md'>สร้างลิงก์ที่เป็นส่วนตัวและน่าจดจำสำหรับ URL ของคุณ (ทางเลือก)</FormLabel>
             <InputGroup size='md' className={ styles.InputGroup }>
                 <InputLeftAddon children={ `${clientBaseUrl}` } className={ styles.BaseUrlAddon } w='50%' />
                 <Input placeholder='your personalized code ' id="urlCode"
